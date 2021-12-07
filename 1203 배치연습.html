@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    
+    .container{width: 1000px; height: 100%; margin:0 auto ; border: 1px solid #333;}
+
+    header {width: 100%; height: 100px; background-color: gold;}
+    header .container {display: flex; justify-content: space-between; align-items: center;} 
+    /*flex한줄로 배치..요소추가가능 교차축 여러개일때=> align-contents */
+    #logo { width: 100px; height: 70px; background-color: hotpink; }
+    nav {width: 500px; height: 50px; background-color: tomato;}
+     /*float 잘쓰지 않음 ,깨지는 경우가 많이 발생 마진값지정 배치해줘야함 
+     position 지정시  헤더안 컨테이너 기준으로 .
+     */
+
+    #slider {width: 100%; height: 500px; background-color: pink;}
+    section .container {display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-around;}
+    section {width: 100%; height: 400px; background-color: green;}
+    section h1,p { width: 100%;text-align: center;} /* 줄넘김할때 width 100% 값줌.*/
+    section .box{ width: 20%; height: 60%; background-color: indigo;display: flex; flex-direction: column;justify-content: space-around; align-items: center; }
+    .box img {width: 70%; height: 70%;}
+
+    footer {width: 100%; height: 200px; background-color: skyblue;}
+    footer.container {position: relative;}
+    footer img {position: absolute; right:-100px; bottom: 0;}
+    footer span {position: absolute; top: 50%; transform: translateY(-50%);} 
+    footer .prev {left: 0;}
+    footer .next {right: 0;}
+    footer .box {float: left; margin-right: 10px; width: 28%; height: 100px; background-color: yellowgreen; margin-bottom: 20px;}
+    footer .info {width: 80%; height: 50px; background-color: violet; clear: both ;}/*flaot속성무시 claer*/
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div id="logo"></div>
+      <nav></nav>
+    </div>
+  </header>
+  <div id="slider"></div>
+
+  <section>
+    <div class="container">
+      <h1>TITLE</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+      <div class="box">
+        <img src="img/apple.jpg" alt="">
+        <p>APPLE</p>
+        <button>click</button>
+      </div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="container">
+      <img src="img/ka.png" alt="">
+      <span class="prev">&lt;</span>
+      <span class="next">&gt;</span>
+
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+
+      <div class="info"></div>
+
+    </div>
+  </footer>
+</body>
+</html>
